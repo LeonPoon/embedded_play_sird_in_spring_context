@@ -12,7 +12,7 @@ import play.core.server.{AkkaHttpServer, Server, ServerConfig}
 import javax.inject.Inject
 
 
-class ScalaSimpleRouter @Inject()(val Action: DefaultActionBuilder, val dummy: DummyBean) extends SimpleRouter {
+class ScalaSimpleRouter @Inject()(val Action: DefaultActionBuilder, val dummy: DummyInterface) extends SimpleRouter {
   override def routes: Routes = {
     case GET(p"/hello/$to") =>
       Action {
